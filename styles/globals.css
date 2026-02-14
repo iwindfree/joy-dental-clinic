@@ -900,10 +900,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .specialty-hero h1 { font-size: 2rem; }
   .specialty-intro-grid { grid-template-columns: 1fr; }
   .footer-content { flex-direction: column; }
-  .hero-content { justify-content: flex-end; padding-bottom: 60px; }
-  .hero-buttons { flex-direction: row; justify-content: center; gap: 8px; }
-  .hero-buttons .btn { padding: 8px 16px; font-size: 0.8rem; gap: 5px; }
-  .hero-buttons .btn svg { width: 14px !important; height: 14px !important; }
+  .hero { align-items: flex-end; }
+  .hero-content { padding-bottom: 0; margin-bottom: 0; }
+  .hero-buttons {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    flex-direction: row; justify-content: center; gap: 0;
+    background: var(--primary); padding: 0;
+  }
+  .hero-buttons .btn {
+    flex: 1; justify-content: center; padding: 14px 0;
+    font-size: 0.85rem; gap: 6px; border-radius: 0; color: #fff;
+    background: transparent; box-shadow: none; border: none;
+  }
+  .hero-buttons .btn:first-child { border-right: 1px solid rgba(255,255,255,0.2); }
+  .hero-buttons .btn svg { width: 16px !important; height: 16px !important; }
+  .hero-buttons .btn-white { background: transparent; color: #fff; }
+  .hero-buttons .btn-outline { border: none; background: transparent; }
   .post-header h1 { font-size: 1.5rem; }
   .post-content { font-size: 1rem; }
   .columns-page { padding-top: 80px; }
