@@ -873,8 +873,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .section-subtitle { font-size: 0.95rem; margin-bottom: 36px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
+  .hero-content { position: static; }
   .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1rem; }
+  .hero p { font-size: 1rem; margin-bottom: 0; }
   .about-intro-text { padding: 48px 0; }
   .about-intro-text h2 { font-size: 1.8rem; }
   .about-cinematic { height: 40vh; min-height: 280px; }
@@ -903,17 +904,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-buttons {
     position: absolute; bottom: 0; left: 0; right: 0; z-index: 10;
     flex-direction: row; justify-content: center; gap: 0;
-    background: rgba(15,25,35,0.85); backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);
     padding: 0; margin: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
   .hero-buttons .btn {
-    flex: 1; justify-content: center; padding: 14px 0;
-    font-size: 0.85rem; gap: 6px; border-radius: 0; color: #fff;
+    flex: 1; justify-content: center; padding: 12px 0;
+    font-size: 0.82rem; gap: 5px; border-radius: 0;
+    color: rgba(255,255,255,0.9);
     background: transparent; box-shadow: none; border: none;
   }
   .hero-buttons .btn:first-child { border-right: 1px solid rgba(255,255,255,0.2); }
-  .hero-buttons .btn svg { width: 16px !important; height: 16px !important; }
-  .hero-buttons .btn-white { background: transparent; color: #fff; }
+  .hero-buttons .btn svg { width: 14px !important; height: 14px !important; }
+  .hero-buttons .btn-white { background: transparent; color: rgba(255,255,255,0.9); }
   .hero-buttons .btn-outline { border: none; background: transparent; }
   .post-header h1 { font-size: 1.5rem; }
   .post-content { font-size: 1rem; }
