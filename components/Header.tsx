@@ -34,9 +34,10 @@ export default function Header({ phone1 }: HeaderProps) {
     { href: "/#doctors", label: "의료진" },
     { href: "/#treatments", label: "진료분야" },
     { href: "/#hours", label: "진료안내" },
-    { href: "/#map", label: "오시는 길" },
+    { href: "/implant", label: "임플란트" },
+    { href: "/ortho", label: "교정" },
     { href: "/notice", label: "공지사항" },
-    { href: "/columns", label: "칼럼" },
+    { href: "/#map", label: "오시는 길" },
   ];
 
   return (

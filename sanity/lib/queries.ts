@@ -25,6 +25,11 @@ export const recentPostsQuery = `*[_type == "post"] | order(date desc)[0...6]{
   "firstImage": body[_type == "image"][0]
 }`;
 
+export const postsByCategoryQuery = `*[_type == "post" && category == $category] | order(date desc){
+  _id, title, slug, date, category, author, thumbnail,
+  "excerpt": pt::text(body)
+}`;
+
 export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
   _id, title, slug, date, category, author, thumbnail, body
 }`;

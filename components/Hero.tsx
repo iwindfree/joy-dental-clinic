@@ -22,15 +22,15 @@ export default function Hero({ slides, phone1 }: HeroProps) {
     if (slides.length < 2) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
   const placeholderColors = [
-    "linear-gradient(135deg, #1e3a6e, #2B7DE9)",
-    "linear-gradient(135deg, #2B7DE9, #00B4D8)",
-    "linear-gradient(135deg, #00B4D8, #1e3a6e)",
-    "linear-gradient(135deg, #1A5CB8, #00B4D8)",
+    "linear-gradient(135deg, #0F2540, #1B3A5C)",
+    "linear-gradient(135deg, #1B3A5C, #2A4F73)",
+    "linear-gradient(135deg, #2A4F73, #0F2540)",
+    "linear-gradient(135deg, #0F2540, #1B3A5C)",
   ];
 
   return (

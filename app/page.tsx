@@ -4,7 +4,6 @@ import {
   heroSlidesQuery,
   doctorsQuery,
   hoursQuery,
-  recentPostsQuery,
   recentNoticesQuery,
 } from "@/sanity/lib/queries";
 import Hero from "@/components/Hero";
@@ -14,16 +13,14 @@ import Treatments from "@/components/Treatments";
 import Hours from "@/components/Hours";
 import MapSection from "@/components/MapSection";
 import NoticePreview from "@/components/NoticePreview";
-import BlogPreview from "@/components/BlogPreview";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function HomePage() {
-  const [settings, slides, doctors, hours, posts, notices] = await Promise.all([
+  const [settings, slides, doctors, hours, notices] = await Promise.all([
     safeFetch<any>(siteSettingsQuery),
     safeFetch<any[]>(heroSlidesQuery),
     safeFetch<any[]>(doctorsQuery),
     safeFetch<any>(hoursQuery),
-    safeFetch<any[]>(recentPostsQuery),
     safeFetch<any[]>(recentNoticesQuery),
   ]);
 
@@ -46,7 +43,6 @@ export default async function HomePage() {
       />
       <MapSection address={address} />
       <NoticePreview notices={notices || []} />
-      <BlogPreview posts={posts || []} />
     </>
   );
 }
